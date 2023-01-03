@@ -1,0 +1,5 @@
+rm_description
+/home/gura/final/devel/.private/rm_description/cmake.lock /home/gura/final/devel/./cmake.lock
+/home/gura/final/devel/.private/rm_description/share/rm_description/cmake/rm_descriptionConfig-version.cmake /home/gura/final/devel/share/rm_description/cmake/rm_descriptionConfig-version.cmake
+/home/gura/final/devel/.private/rm_description/share/rm_description/cmake/rm_descriptionConfig.cmake /home/gura/final/devel/share/rm_description/cmake/rm_descriptionConfig.cmake
+/home/gura/final/devel/.private/rm_description/lib/pkgconfig/rm_description.pc /home/gura/final/devel/lib/pkgconfig/rm_description.pc

@@ -1,0 +1,1 @@
+/home/gura/final/devel/./cmake.lock 10

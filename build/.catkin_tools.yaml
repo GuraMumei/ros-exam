@@ -1,0 +1,6 @@
+devel_space: /home/gura/final/devel
+install: false
+install_space: /home/gura/final/install
+profile: default
+source_space: /home/gura/final/src
+workspace: /home/gura/final

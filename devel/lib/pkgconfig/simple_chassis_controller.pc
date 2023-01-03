@@ -1,0 +1,1 @@
+/home/gura/final/devel/.private/simple_chassis_controller/lib/pkgconfig/simple_chassis_controller.pc
