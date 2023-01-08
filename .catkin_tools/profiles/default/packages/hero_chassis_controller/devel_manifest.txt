@@ -1,0 +1,6 @@
+hero_chassis_controller
+/home/gura/final/devel/.private/hero_chassis_controller/cmake.lock /home/gura/final/devel/./cmake.lock
+/home/gura/final/devel/.private/hero_chassis_controller/share/hero_chassis_controller/cmake/hero_chassis_controllerConfig-version.cmake /home/gura/final/devel/share/hero_chassis_controller/cmake/hero_chassis_controllerConfig-version.cmake
+/home/gura/final/devel/.private/hero_chassis_controller/share/hero_chassis_controller/cmake/hero_chassis_controllerConfig.cmake /home/gura/final/devel/share/hero_chassis_controller/cmake/hero_chassis_controllerConfig.cmake
+/home/gura/final/devel/.private/hero_chassis_controller/lib/libhero_chassis_controller.so /home/gura/final/devel/lib/libhero_chassis_controller.so
+/home/gura/final/devel/.private/hero_chassis_controller/lib/pkgconfig/hero_chassis_controller.pc /home/gura/final/devel/lib/pkgconfig/hero_chassis_controller.pc

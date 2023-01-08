@@ -1,0 +1,4 @@
+# ninja log v5
+1787	1857	1673097377137173990	/home/gura/final/devel/lib/libsimple_chassis_controller.so	812545ed3f814b3a
+0	1236	1673111503529528388	build.ninja	96f38a0a741fc961
+0	1786	1673097377065179286	simple_chassis_controller/CMakeFiles/simple_chassis_controller.dir/src/simple_chassis_controller.cpp.o	9f2c8dbb95975f23

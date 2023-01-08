@@ -1,0 +1,33 @@
+controller:
+
+  hero_chassis_controller:
+    type: hero_chassis_controller/HeroChassisController
+    WHEEL_DIAMETER : 0.07625  
+    D_X : 0.4                
+    D_Y : 0.4
+    odomcontrol : false
+
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+    
+      # Position Controllers 
+  front_left:
+    joint: left_front_wheel_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  front_right:
+    joint: right_front_wheel_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  back_left:
+    joint: left_back_wheel_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  back_right:
+    joint: right_back_wheel_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}  
+    
+   
+  
+
+
+ 
+
