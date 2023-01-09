@@ -43,8 +43,8 @@ tf2/LinearMath/Quaternion.h
 /home/gura/final/src/hero_chassis_controller/include/hero_chassis_controller/tf2/LinearMath/Quaternion.h
 tf/transform_datatypes.h
 /home/gura/final/src/hero_chassis_controller/include/hero_chassis_controller/tf/transform_datatypes.h
-tf2_ros/static_transform_broadcaster.h
-/home/gura/final/src/hero_chassis_controller/include/hero_chassis_controller/tf2_ros/static_transform_broadcaster.h
+geometry_msgs/Vector3Stamped.h
+-
 
 /home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp
 pluginlib/class_list_macros.hpp
@@ -2037,14 +2037,6 @@ sstream
 -
 tf2/convert.h
 -
-
-/opt/ros/noetic/include/tf2_ros/static_transform_broadcaster.h
-ros/ros.h
-/opt/ros/noetic/include/tf2_ros/ros/ros.h
-geometry_msgs/TransformStamped.h
-/opt/ros/noetic/include/tf2_ros/geometry_msgs/TransformStamped.h
-tf2_msgs/TFMessage.h
-/opt/ros/noetic/include/tf2_ros/tf2_msgs/TFMessage.h
 
 /opt/ros/noetic/include/tf2_ros/transform_broadcaster.h
 ros/ros.h

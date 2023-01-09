@@ -154,7 +154,6 @@ CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o
  /opt/ros/noetic/include/tf2_msgs/TFMessage.h
  /opt/ros/noetic/include/tf2_ros/buffer.h
  /opt/ros/noetic/include/tf2_ros/buffer_interface.h
- /opt/ros/noetic/include/tf2_ros/static_transform_broadcaster.h
  /opt/ros/noetic/include/tf2_ros/transform_broadcaster.h
  /opt/ros/noetic/include/tf2_ros/transform_listener.h
  /opt/ros/noetic/include/trajectory_msgs/JointTrajectory.h
