@@ -1,0 +1,41 @@
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:[m[K In member function ‘[01m[Kvoid hero_chassis_controller::HeroChassisController::updateOdometry(const ros::Time&)[m[K’:
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:156:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kheader[m[K’
+  156 |     tf_odom_pub_->msg_.[01;31m[Kheader[m[K.stamp = current_time;
+      |                        [01;31m[K^~~~~~[m[K
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:157:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kheader[m[K’
+  157 |     tf_odom_pub_->msg_.[01;31m[Kheader[m[K.frame_id = "odom";
+      |                        [01;31m[K^~~~~~[m[K
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:158:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kchild_frame_id[m[K’
+  158 |     tf_odom_pub_->msg_.[01;31m[Kchild_frame_id[m[K = "base_link";
+      |                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:160:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ktransform[m[K’; did you mean ‘[01m[Ktransforms[m[K’?
+  160 |     tf_odom_pub_->msg_.[01;31m[Ktransform[m[K.translation.x = x;
+      |                        [01;31m[K^~~~~~~~~[m[K
+      |                        [32m[Ktransforms[m[K
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:161:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ktransform[m[K’; did you mean ‘[01m[Ktransforms[m[K’?
+  161 |     tf_odom_pub_->msg_.[01;31m[Ktransform[m[K.translation.y = y;
+      |                        [01;31m[K^~~~~~~~~[m[K
+      |                        [32m[Ktransforms[m[K
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:162:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ktransform[m[K’; did you mean ‘[01m[Ktransforms[m[K’?
+  162 |     tf_odom_pub_->msg_.[01;31m[Ktransform[m[K.translation.z = 0.0;
+      |                        [01;31m[K^~~~~~~~~[m[K
+      |                        [32m[Ktransforms[m[K
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:163:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ktransform[m[K’; did you mean ‘[01m[Ktransforms[m[K’?
+  163 |     tf_odom_pub_->msg_.[01;31m[Ktransform[m[K.rotation.x =  qtn.getX();
+      |                        [01;31m[K^~~~~~~~~[m[K
+      |                        [32m[Ktransforms[m[K
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:164:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ktransform[m[K’; did you mean ‘[01m[Ktransforms[m[K’?
+  164 |     tf_odom_pub_->msg_.[01;31m[Ktransform[m[K.rotation.y = qtn.getY();
+      |                        [01;31m[K^~~~~~~~~[m[K
+      |                        [32m[Ktransforms[m[K
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:165:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ktransform[m[K’; did you mean ‘[01m[Ktransforms[m[K’?
+  165 |     tf_odom_pub_->msg_.[01;31m[Ktransform[m[K.rotation.z = qtn.getZ();
+      |                        [01;31m[K^~~~~~~~~[m[K
+      |                        [32m[Ktransforms[m[K
+[01m[K/home/gura/final/src/hero_chassis_controller/src/hero_chassis_controller.cpp:166:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct tf::tfMessage_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ktransform[m[K’; did you mean ‘[01m[Ktransforms[m[K’?
+  166 |     tf_odom_pub_->msg_.[01;31m[Ktransform[m[K.rotation.w = qtn.getW();
+      |                        [01;31m[K^~~~~~~~~[m[K
+      |                        [32m[Ktransforms[m[K
+make[2]: *** [CMakeFiles/hero_chassis_controller.dir/build.make:63：CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/Makefile2:279：CMakeFiles/hero_chassis_controller.dir/all] 错误 2
+make: *** [Makefile:141：all] 错误 2

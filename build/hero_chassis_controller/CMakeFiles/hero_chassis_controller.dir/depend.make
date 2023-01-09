@@ -153,6 +153,7 @@ CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o: /opt/r
 CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o: /opt/ros/noetic/include/tf2_msgs/TFMessage.h
 CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o: /opt/ros/noetic/include/tf2_ros/buffer.h
 CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o: /opt/ros/noetic/include/tf2_ros/buffer_interface.h
+CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o: /opt/ros/noetic/include/tf2_ros/static_transform_broadcaster.h
 CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o: /opt/ros/noetic/include/tf2_ros/transform_broadcaster.h
 CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o: /opt/ros/noetic/include/tf2_ros/transform_listener.h
 CMakeFiles/hero_chassis_controller.dir/src/hero_chassis_controller.cpp.o: /opt/ros/noetic/include/trajectory_msgs/JointTrajectory.h

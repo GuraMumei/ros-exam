@@ -19,7 +19,7 @@
 #include <geometry_msgs/Twist.h>
 #include "tf2/LinearMath/Quaternion.h"
 #include "tf/transform_datatypes.h"
-
+#include "tf2_ros/static_transform_broadcaster.h"
 
 namespace hero_chassis_controller
 {
@@ -42,7 +42,8 @@ public:
 
   ros::NodeHandle node_;
   
-  
+  std::string odom_= "odom";
+  std::string base_link_ = "base_link";
   
   //tf::TransformListener listener;
   ros::Publisher pub;
@@ -52,8 +53,9 @@ public:
   std::vector<control_toolbox::Pid> pid_controller_;
 
   std::shared_ptr<realtime_tools::RealtimePublisher<nav_msgs::Odometry> > odom_pub_;
-  std::shared_ptr< realtime_tools::RealtimePublisher<geometry_msgs::TransformStamped> > tf_odom_pub_;
-  //static tf::TransformBroadcaster odom_broadcaster;
+  std::shared_ptr< realtime_tools::RealtimePublisher<tf::tfMessage> > tf_odom_pub_;
+  geometry_msgs::TransformStamped odomTf_;
+  //tf2_ros::TransformBroadcaster tfBroadcaster_;
   double output[4] = { 0, 0, 0, 0 };
   int state_{};
   ros::Time last_change_;
@@ -62,7 +64,7 @@ public:
   double v_tx ;
   double v_ty ;
   double omiga ;
-  double WHEEL_DIAMETER =0.07625;  // 轮子直径,单位：米
+  double WHEEL_DIAMETER =0.07625;  // 轮子直径
   double D_X =0.4;                 // 底盘Y轴上两轮中心的间距
   double D_Y =0.4;                 // 底盘X轴上两轮中心的间距
   double v_x=0;

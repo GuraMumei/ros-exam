@@ -49,7 +49,11 @@ bool HeroChassisController::init(hardware_interface::EffortJointInterface* effor
   sub_command_ = node_.subscribe("/cmd_vel", 1, &HeroChassisController::receiveCmd, this);
   odomcmd = node_.subscribe("/odom", 3, &HeroChassisController::odomCallback, this);
   odom_pub_.reset(new realtime_tools::RealtimePublisher<nav_msgs::Odometry>(controller_nh, "/odom", 100));
-  tf_odom_pub_.reset( new realtime_tools::RealtimePublisher<geometry_msgs::TransformStamped>(root_nh, "/tf", 100));
+  tf_odom_pub_.reset( new realtime_tools::RealtimePublisher<tf::tfMessage>(root_nh, "/tf", 100));
+  tf_odom_pub_->msg_.transforms.resize(1);
+    tf_odom_pub_->msg_.transforms[0].transform.translation.z = 0.0;
+    tf_odom_pub_->msg_.transforms[0].child_frame_id = base_link_;
+    tf_odom_pub_->msg_.transforms[0].header.frame_id = "odom";
   return true;
 }
 
@@ -151,23 +155,28 @@ void HeroChassisController::updateOdometry(const ros::Time& time)
   qtn.setRPY(0,0,th) ;
 
   // first, we'll publish the transform over tf
-  if(tf_odom_pub_->trylock()){
-
-    tf_odom_pub_->msg_.header.stamp = current_time;
-    tf_odom_pub_->msg_.header.frame_id = "odom";
-    tf_odom_pub_->msg_.child_frame_id = "base_link";
-
-    tf_odom_pub_->msg_.transform.translation.x = x;
-    tf_odom_pub_->msg_.transform.translation.y = y;
-    tf_odom_pub_->msg_.transform.translation.z = 0.0;
-    tf_odom_pub_->msg_.transform.rotation.x =  qtn.getX();
-    tf_odom_pub_->msg_.transform.rotation.y = qtn.getY();
-    tf_odom_pub_->msg_.transform.rotation.z = qtn.getZ();
-    tf_odom_pub_->msg_.transform.rotation.w = qtn.getW();
+  geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(th);
+   if(tf_odom_pub_->trylock()){
+    //geometry_msgs::TransformStamped odom_frame= tf_odom_pub_->msg_.transforms[0];
+    tf_odom_pub_->msg_.transforms[0].header.stamp = time;
+    tf_odom_pub_->msg_.transforms[0].transform.translation.x = x;
+    tf_odom_pub_->msg_.transforms[0].transform.translation.y = y;
+    tf_odom_pub_->msg_.transforms[0].transform.rotation = odom_quat;
     tf_odom_pub_->unlockAndPublish();
   }
-/**/
-  geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(th);
+/*
+  odomTf_.header.stamp = time;
+  odomTf_.header.frame_id = odom_;
+  odomTf_.child_frame_id = base_link_;
+  odomTf_.transform.translation.x = x;
+  odomTf_.transform.translation.y = y;
+  odomTf_.transform.translation.z = 0;
+  odomTf_.transform.rotation.x = qtn.x();
+  odomTf_.transform.rotation.y = qtn.y();
+  odomTf_.transform.rotation.z = qtn.z();
+  odomTf_.transform.rotation.w = qtn.w();
+  tfBroadcaster_.sendTransform(odomTf_);*/
+
 
   if (odom_pub_->trylock())
   {
